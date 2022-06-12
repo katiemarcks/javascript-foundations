@@ -37,19 +37,19 @@ describe("Pirate", function () {
     assert.equal(pirate.cursed, false);
   });
 
-  it.skip("should be able to rob ships", function () {
+  it("should be able to rob ships", function () {
     var pirate = new Pirate("Grace OMalley");
 
     assert.equal(pirate.robShip(), "YAARRR!");
   });
 
-  it.skip("should start with a booty of 0", function () {
+  it("should start with a booty of 0", function () {
     var pirate = new Pirate("Rachel Wall");
 
     assert.equal(pirate.booty, 0);
   });
 
-  it.skip("should get 100 gold pieces when robbing a ship", function () {
+  it("should get 100 gold pieces when robbing a ship", function () {
     var pirate = new Pirate("Hannah");
 
     pirate.robShip();
@@ -61,7 +61,7 @@ describe("Pirate", function () {
     assert.equal(pirate.booty, 200);
   });
 
-  it.skip("should get cursed after robbing 5 ships instead of getting money", function () {
+  it("should get cursed after robbing 5 ships instead of getting money", function () {
     var pirate = new Pirate("Robbie");
 
     pirate.robShip();

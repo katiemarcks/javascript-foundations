@@ -79,7 +79,7 @@ describe("Pirate", function () {
     assert.equal(pirate.robShip(), "ARG! I've been cursed!");
   });
 
-  it.skip("should be able to lift curse for 300 booty", function () {
+  it("should be able to lift curse for 300 booty", function () {
     var pirate = new Pirate("Scott");
 
     function timeTravel() {
@@ -95,7 +95,7 @@ describe("Pirate", function () {
     assert.equal(pirate.cursed, false);
   });
 
-  it.skip("should only be able to lift curse if cursed", function () {
+  it("should only be able to lift curse if cursed", function () {
     var pirate = new Pirate("Kayla", "captain");
 
     pirate.robShip();

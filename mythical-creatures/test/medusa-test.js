@@ -49,7 +49,7 @@ describe("Medusa", function () {
     assert.equal(medusa.statues[1].name, "Bob");
   });
 
-  it.skip("should only be able to have three victims as statues", function () {
+  it("should only be able to have three victims as statues", function () {
     var medusa = new Medusa("Hannah");
     var victim1 = new Person("Pam");
     var victim2 = new Person("Khalid");
@@ -67,7 +67,7 @@ describe("Medusa", function () {
     assert.instanceOf(medusa.statues[2], Statue);
   });
 
-  it.skip("should let the first victim go free when stoning the 4th", function () {
+  it("should let the first victim go free when stoning the 4th", function () {
     var medusa = new Medusa("Hannah");
     var victim1 = new Person("Pam");
     var victim2 = new Person("Khalid");
@@ -92,7 +92,7 @@ describe("Medusa", function () {
     assert.deepEqual(medusa.statues, [statue2, statue3, statue4]);
   });
 
-  it.skip("should return a freed statue to Person form", function () {
+  it("should return a freed statue to Person form", function () {
     var medusa = new Medusa("Hannah");
     var victim1 = new Person("Pam");
     var victim2 = new Person("Khalid");

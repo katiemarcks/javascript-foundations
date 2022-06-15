@@ -13,7 +13,9 @@ class Medusa {
     } else {
       let freedStatue = this.statues.shift();
       this.statues.push(new Statue(victim.name));
-      return (freedStatue = new Person(freedStatue.name));
+      freedStatue = new Person(freedStatue.name);
+      freedStatue.mood = "relieved";
+      return freedStatue;
     }
   }
 }

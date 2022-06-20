@@ -153,7 +153,7 @@ describe("Centaur", function () {
     assert.equal(centaur.shootBow(), "Twang!!!");
   });
 
-  it.skip("should not be cranky after drinking potion", function () {
+  it("should not be cranky after drinking potion", function () {
     var centaur = new Centaur({ name: "Georgiana", type: "Palomino" });
 
     centaur.shootBow();
@@ -165,7 +165,7 @@ describe("Centaur", function () {
     assert.equal(centaur.cranky, false);
   });
 
-  it.skip("should only drink potion while standing", function () {
+  it("should only drink potion while standing", function () {
     var centaur = new Centaur({ name: "Georgiana", type: "Palomino" });
 
     centaur.layDown();

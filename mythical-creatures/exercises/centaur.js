@@ -47,6 +47,14 @@ class Centaur {
     this.standing = true;
     this.layingDown = false;
   }
+
+  drinkPotion() {
+    if (this.standing) {
+      this.cranky = false;
+    } else {
+      return "Not while I'm laying down!";
+    }
+  }
 }
 
 module.exports = Centaur;

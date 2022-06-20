@@ -94,13 +94,13 @@ describe("Centaur", function () {
     assert.equal(centaur.run(), "NO!");
   });
 
-  it.skip("should not sleep while standing", function () {
+  it("should not sleep while standing", function () {
     var centaur = new Centaur({ name: "Georgiana", type: "Palomino" });
 
     assert.equal(centaur.sleep(), "NO!");
   });
 
-  it.skip("after laying down it is not standing", function () {
+  it("after laying down it is not standing", function () {
     var centaur = new Centaur({ name: "Georgiana", type: "Palomino" });
 
     assert.equal(centaur.standing, true);
@@ -117,7 +117,7 @@ describe("Centaur", function () {
     assert.equal(centaur.layingDown, false);
   });
 
-  it.skip("should not run or shoot while laying down", function () {
+  it("should not run or shoot while laying down", function () {
     var centaur = new Centaur({ name: "Georgiana", type: "Palomino" });
 
     centaur.layDown();
@@ -126,7 +126,7 @@ describe("Centaur", function () {
     assert.equal(centaur.run(), "NO!");
   });
 
-  it.skip("should be able to sleep when laying down", function () {
+  it("should be able to sleep when laying down", function () {
     var centaur = new Centaur({ name: "Georgiana", type: "Palomino" });
 
     centaur.layDown();
@@ -134,7 +134,7 @@ describe("Centaur", function () {
     assert.equal(centaur.sleep(), "ZZZZ");
   });
 
-  it.skip("should not be cranky after sleeping", function () {
+  it("should not be cranky after sleeping", function () {
     var centaur = new Centaur({ name: "Georgiana", type: "Palomino" });
 
     centaur.run();

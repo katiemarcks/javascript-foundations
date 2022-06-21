@@ -1,4 +1,4 @@
-var Direwolf = require("./direwolf");
+const Direwolf = require("./direwolf");
 
 class Stark {
   constructor({ name, area = "Winterfell" }) {
@@ -17,6 +17,8 @@ class Stark {
 
   callDirewolf(name, home) {
     let direwolf = new Direwolf(name, home);
+
+    return direwolf;
   }
 }
 

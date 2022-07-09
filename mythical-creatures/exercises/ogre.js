@@ -7,8 +7,11 @@ class Ogre {
 
   encounter(human) {
     human.encounterCounter = human.encounterCounter + 1;
-    if (human.encounterCounter === 3) {
+    if (human.encounterCounter === 3 || human.encounterCounter === 6) {
       this.swings = this.swings + 1;
+      if (this.swings === 2) {
+        human.knockedOut = true;
+      }
     }
   }
 

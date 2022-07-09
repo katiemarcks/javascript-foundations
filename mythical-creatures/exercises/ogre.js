@@ -18,6 +18,10 @@ class Ogre {
   swingAt(human) {
     this.swings = this.swings + 1;
   }
+
+  apologize(human) {
+    human.knockedOut = false;
+  }
 }
 
 module.exports = Ogre;

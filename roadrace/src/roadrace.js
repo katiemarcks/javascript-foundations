@@ -14,6 +14,13 @@ class Roadrace {
   registerParticipants(runner) {
     this.participants.push(runner);
   }
+
+  completeRace() {
+    for (let i = 0; i < this.participants.length; i++) {
+      const participant = this.participants[i];
+      participant.completedRaces.push(this.name);
+    }
+  }
 }
 
 module.exports = Roadrace;

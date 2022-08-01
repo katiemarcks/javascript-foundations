@@ -12,7 +12,7 @@ class Runner {
     this.fitness = this.fitness + miles;
   }
 
-  stretch(miles) {
+  stretch() {
     this.fitness = this.fitness + 0.5;
   }
 

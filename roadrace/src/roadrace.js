@@ -18,8 +18,7 @@ class Roadrace {
   completeRace() {
     for (let i = 0; i < this.participants.length; i++) {
       const participant = this.participants[i];
-      participant.completedRaces.push(this.name);
-      participant.runSomeMiles(this.distance);
+      participant.runRace(this.name, this.distance);
     }
   }
 }

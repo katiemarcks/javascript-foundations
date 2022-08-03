@@ -11,6 +11,11 @@ class TrickOrTreater {
     this.bag.fill();
     this.countCandies = this.countCandies + 1;
   }
+
+  eat() {
+    this.countCandies = this.countCandies - 1;
+    this.bag.candies.pop();
+  }
 }
 
 module.exports = TrickOrTreater;

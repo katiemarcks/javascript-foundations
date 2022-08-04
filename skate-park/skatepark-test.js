@@ -253,7 +253,7 @@ describe("Skate Park", function () {
 });
 
 describe("Skater", function () {
-  it.skip("should have a name", function () {
+  it("should have a name", function () {
     var skater = new Skater({ name: "Scott" });
     var skater2 = new Skater({ name: "Nora" });
 
@@ -261,7 +261,7 @@ describe("Skater", function () {
     assert.equal(skater2.name, "Nora");
   });
 
-  it.skip("should have a skill level", function () {
+  it("should have a skill level", function () {
     var skater = new Skater({ name: "Scott", skill: "Intermediate" });
     var skater2 = new Skater({ name: "Nora", skill: "Advanced" });
 
@@ -269,7 +269,7 @@ describe("Skater", function () {
     assert.equal(skater2.skill, "Advanced");
   });
 
-  it.skip("should know some tricks", function () {
+  it("should know some tricks", function () {
     var tricks = {
       kickflip: true,
       treflip: false,
@@ -296,7 +296,7 @@ describe("Skater", function () {
     assert.equal(skater2.tricks.treflip, true);
   });
 
-  it.skip("should have some money", function () {
+  it("should have some money", function () {
     var tricks = {
       kickflip: true,
       treflip: false,
@@ -325,7 +325,7 @@ describe("Skater", function () {
     assert.equal(skater2.money, 200);
   });
 
-  it.skip("should start off with no frustration", function () {
+  it("should start off with no frustration", function () {
     var tricks = {
       kickflip: true,
       treflip: false,
@@ -341,7 +341,7 @@ describe("Skater", function () {
     assert.equal(skater.frustration, 0);
   });
 
-  it.skip("should increase frustration by 1 when practicing tricks they dont know", function () {
+  it("should increase frustration by 1 when practicing tricks they dont know", function () {
     var tricks = {
       kickflip: true,
       treflip: false,

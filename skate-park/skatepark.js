@@ -10,12 +10,18 @@ class SkatePark {
   }
 
   admit(skater) {
-    if (this.isPrivate && skater.money >= this.cost) {
+    if (
+      this.isPrivate &&
+      skater.money >= this.cost &&
+      this.occupants.length < 3
+    ) {
       this.occupants.push(skater);
       skater.money = skater.money - this.cost;
       return `Welcome to ${this.name}, the cost will be $${this.cost}.00.`;
     } else if (this.isPrivate && skater.money < this.cost) {
       return `Sorry, you don't have enough money.`;
+    } else if (this.occupants.length === 3) {
+      return `Sorry, we are at max capacity. Thank you for understanding.`;
     } else {
       this.occupants.push(skater);
       return `Welcome to the free ${this.name} Skatepark!`;

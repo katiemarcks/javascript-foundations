@@ -16,18 +16,15 @@ class VendingMachine {
   purchaseSnack(snackName, moneyPaid) {
     let index = this.snacks.findIndex((e) => e.name === snackName);
     let correctItem = this.snacks[index];
-    if (correctItem.itemsInStock > 0) {
+    if (correctItem.itemsInStock > 0 && moneyPaid >= correctItem.price) {
       correctItem.itemsInStock = correctItem.itemsInStock - 1;
       let change = moneyPaid - correctItem.price;
       return `Success! Here is $${change} back!`;
+    } else if (correctItem.itemsInStock > 0 && moneyPaid < correctItem.price) {
+      return `Sorry, not enough payment. Please add more money.`;
     } else {
       return `Sorry, no items in stock. Try another item.`;
     }
-
-    // if (!this.snacks.some((e) => e.name === snackName)) {
-    //   let index = this.snacks.findIndex((e) => e.name === snackName);
-    //   this.snacks.splice(index, 1);
-    // }
   }
 }
 

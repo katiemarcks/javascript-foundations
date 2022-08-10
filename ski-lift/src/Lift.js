@@ -18,6 +18,19 @@ class Lift {
       return `Sorry, ${skier.name}. Please wait for the next lift!`;
     }
   }
+
+  startLift() {
+    if (this.skiers.length === this.limit) {
+      this.safetyBar = "down";
+    } else if (this.skiers.length < this.limit) {
+      let skiersNeeded = this.limit - this.skiers.length;
+      if (skiersNeeded === 1) {
+        return `We still need 1 more skier!`;
+      } else if (skiersNeeded > 1) {
+        return `We still need ${skiersNeeded} more skiers!`;
+      }
+    }
+  }
 }
 
 module.exports = Lift;

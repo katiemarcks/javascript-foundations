@@ -10,7 +10,11 @@ class Lift {
 
   admitSkier(name, hasLiftTicket) {
     let skier = new Skier(name, hasLiftTicket);
-    this.skiers.push(skier);
+    if (this.skiers.length <= this.limit - 1) {
+      this.skiers.push(skier);
+    } else {
+      return `Sorry, ${skier.name}. Please wait for the next lift!`;
+    }
   }
 }
 

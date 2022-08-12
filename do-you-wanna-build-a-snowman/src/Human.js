@@ -17,11 +17,12 @@ class Human {
   }
 
   buildASnowman() {
-    return new Snowman(this.materials);
+    this.snowman = new Snowman(this.materials);
+    return this.snowman;
   }
 
   placeMagicHat() {
-    if (Snowman.magicHat === true) {
+    if (this.snowman.magicHat) {
       return `Woah, this snowman is coming to life!`;
     } else {
       return `I guess I didn't build it correctly.`;

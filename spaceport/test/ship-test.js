@@ -151,7 +151,7 @@ describe("Ship", function () {
     assert.equal(fighter.crew.length, 3);
   });
 
-  it.skip("should only be able to add crew up to the maxCrew size", function () {
+  it("should only be able to add crew up to the maxCrew size", function () {
     var initalMember = new Being("Ed", "human");
     var crewmember = new Being("Zot", "krill");
     var droid = new Being("R2-D2", "droid");
@@ -171,7 +171,7 @@ describe("Ship", function () {
     assert.equal(fighter.crew.length, 2);
   });
 
-  it.skip("should not be able to add something other than a being into the crew", function () {
+  it("should not be able to add something other than a being into the crew", function () {
     var fighter = new Ship({
       name: "Atlantis",
       type: "military",

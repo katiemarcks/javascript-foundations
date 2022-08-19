@@ -1,3 +1,5 @@
+const Being = require("./being");
+
 class Ship {
   constructor({
     name,
@@ -20,7 +22,9 @@ class Ship {
   addCrew(crew) {
     for (let i = 0; i < crew.length; i++) {
       const element = crew[i];
-      this.crew.push(element);
+      if (this.crew.length < this.maxCrew) {
+        this.crew.push(element);
+      }
     }
   }
 }

@@ -22,7 +22,7 @@ class Ship {
   addCrew(crew) {
     for (let i = 0; i < crew.length; i++) {
       const element = crew[i];
-      if (this.crew.length < this.maxCrew) {
+      if (this.crew.length < this.maxCrew && element instanceof Being) {
         this.crew.push(element);
       }
     }

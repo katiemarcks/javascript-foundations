@@ -185,7 +185,7 @@ describe("Ship", function () {
     assert.deepEqual(fighter.crew, []);
   });
 
-  it.skip("should not have any cargo by default", function () {
+  it("should not have any cargo by default", function () {
     var fighter = new Ship({
       name: "Atlantis",
       type: "military",
@@ -196,7 +196,7 @@ describe("Ship", function () {
     assert.deepEqual(fighter.cargo, []);
   });
 
-  it.skip("should be able to load cargo", function () {
+  it("should be able to load cargo", function () {
     var partCargo = new Part({ name: "Dell", type: "computer", value: 100 });
     var fighter = new Ship({
       name: "Atlantis",
@@ -211,7 +211,7 @@ describe("Ship", function () {
     assert.equal(fighter.cargo.length, 1);
   });
 
-  it.skip("should only be able to load cargo that is a Part", function () {
+  it("should only be able to load cargo that is a Part", function () {
     var partCargo = new Part({ name: "Dell", type: "computer", value: 100 });
     var fighter = new Ship({
       name: "Atlantis",
@@ -228,7 +228,7 @@ describe("Ship", function () {
     assert.deepEqual(fighter.cargo, [partCargo]);
   });
 
-  it.skip("should have an empty parts list by default", function () {
+  it("should have an empty parts list by default", function () {
     var fighter = new Ship({
       name: "Atlantis",
       type: "military",
@@ -239,7 +239,7 @@ describe("Ship", function () {
     assert.deepEqual(fighter.parts, {});
   });
 
-  it.skip("should be able to be initialized with parts", function () {
+  it("should be able to be initialized with parts", function () {
     var parts = {
       shell: new Part({ name: "XC-Wing", type: "shell", value: 8000 }),
       computer: new Part({ name: "Starmapper", type: "computer", value: 300 }),
@@ -255,7 +255,7 @@ describe("Ship", function () {
     assert.deepEqual(fighter.parts, parts);
   });
 
-  it.skip("should be able to add a new part", function () {
+  it("should be able to add a new part", function () {
     var parts = {
       shell: new Part({ name: "XC-Wing", type: "shell", value: 8000 }),
       computer: new Part({ name: "Starmapper", type: "computer", value: 300 }),
@@ -278,7 +278,7 @@ describe("Ship", function () {
     assert.deepEqual(fighter.parts.hyperdrive, hyperdrive);
   });
 
-  it.skip("should be able to replace an existing part and return the difference in value", function () {
+  it("should be able to replace an existing part and return the difference in value", function () {
     var parts = {
       shell: new Part({ name: "XC-Wing", type: "shell", value: 8000 }),
       computer: new Part({ name: "Starmapper", type: "computer", value: 300 }),
@@ -298,7 +298,7 @@ describe("Ship", function () {
     assert.equal(difference, -1000);
   });
 
-  it.skip("should be able replace another existing part and return the difference in value", function () {
+  it("should be able replace another existing part and return the difference in value", function () {
     var parts = {
       shell: new Part({ name: "XC-Wing", type: "shell", value: 8000 }),
       computer: new Part({ name: "Starmapper", type: "computer", value: 300 }),

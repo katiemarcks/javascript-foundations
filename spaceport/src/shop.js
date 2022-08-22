@@ -1,4 +1,7 @@
 var Part = require("./part");
+var Being = require("./being");
+var Ship = require("./ship");
+var ShopTest = require("../test/shop-test");
 
 class Shop {
   constructor({ name }) {
@@ -13,10 +16,12 @@ class Shop {
   }
 
   outfitShip(ship, item) {
-    if (ship.captain === undefined) {
+    let captain = ship.captain;
+    let itemObject = this.inventory[item];
+    if (captain === undefined) {
       return `cannot outfit a ship without a captain`;
-    } else if (ship.captain.credits < item.value) {
-      let creditsNeeded = item.value - ship.captain.credits;
+    } else if (captain.credits < itemObject.value) {
+      let creditsNeeded = itemObject.value - captain.credits;
       return `you require ${creditsNeeded} more credits to make this purchase`;
     }
   }

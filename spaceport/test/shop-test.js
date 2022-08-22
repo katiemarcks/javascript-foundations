@@ -66,7 +66,7 @@ describe("Shop", function () {
     assert.deepEqual(newShop.inventory, {});
   });
 
-  it.skip("cannot outfit a ship without a captain", function () {
+  it("cannot outfit a ship without a captain", function () {
     var fighter = new Ship({
       name: "Atlantis",
       type: "military",
@@ -82,7 +82,7 @@ describe("Shop", function () {
     assert.equal(result, `cannot outfit a ship without a captain`);
   });
 
-  it.skip("should not be able to outfit a ship if the captain is broke", function () {
+  it("should not be able to outfit a ship if the captain is broke", function () {
     var captain = new Being("Will", "human");
 
     var fighter = new Ship({

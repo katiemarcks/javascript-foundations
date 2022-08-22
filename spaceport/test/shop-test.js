@@ -101,7 +101,7 @@ describe("Shop", function () {
     assert.equal(result, "you require 200 more credits to make this purchase");
   });
 
-  it.skip("should be able outfit a ship, and charge the captain", function () {
+  it("should be able outfit a ship, and charge the captain", function () {
     var captain = new Being("Will", "human");
     captain.credits = 1000;
 

@@ -50,7 +50,7 @@ Completing all of these test suites is not necessary, but you should be working 
 - [X] ⛄️ [Snowman](./do-you-wanna-build-a-snowman)
 - [X] 🚀 [Spaceport](./spaceport)
 - [X] 🍔 [Lunch Box](./lunchbox)
-- [ ] 🏞 [Oregon Trail](./oregon-trail)
+- [X] 🏞 [Oregon Trail](./oregon-trail)
 - [ ] 🔮 [Wizarding Arrays](./wizarding-arrays)
 - [ ] ⚡️ [Wizarding Objects](./wizarding-objects)
 

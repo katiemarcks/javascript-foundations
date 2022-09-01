@@ -37,8 +37,8 @@ class Wagon {
     if (
       this.wheels.length === 4 &&
       this.axles.length === 2 &&
-      this.oxen.length === 2 &&
-      this.yokes.length === 1 &&
+      this.oxen.length >= 2 &&
+      this.yokes.length >= 1 &&
       this.settlers.length === 1
     ) {
       for (let i = 0; i < this.wheels.length; i++) {
@@ -56,7 +56,17 @@ class Wagon {
                 if (element.broken === true) {
                   return false;
                 } else {
-                  return true;
+                  if (this.oxen.length / this.yokes.length !== 2) {
+                    return false;
+                  } else {
+                    if (
+                      this.settlers.some((element) => element.status !== "dead")
+                    ) {
+                      return true;
+                    } else {
+                      return false;
+                    }
+                  }
                 }
               }
             }
